@@ -1,0 +1,1 @@
+Create the relational model and transform it into SQL or Prisma
