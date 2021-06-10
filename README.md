@@ -1,11 +1,11 @@
 <p align="center">
-  <img width="144px" src="" />
+  <img width="144px" src="https://ibb.co/7rwkd6n" />
 </p>
 
 <h1 align="center">codegram</h1>
 <p align="center">A tool to convert the relational model into SQL or Prima</p>
 <p align="center"><b>Visual programming, low-code tool, relational model visual editor</b></p>
-<p align="center">Demo</p>
+<p align="center">[Demo](https://codegram-app.herokuapp.com/)</p>
 
 ## Features
 
