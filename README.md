@@ -5,7 +5,7 @@
 <h1 align="center">codegram</h1>
 <p align="center">A tool to convert the relational model into SQL or Prima</p>
 <p align="center"><b>Visual programming, low-code tool, relational model visual editor</b></p>
-<p align="center">[Demo](https://codegram-app.herokuapp.com/)</p>
+<p align="center"><a href="https://codegram-app.herokuapp.com/">Demo</a></p>
 
 ## Features
 
