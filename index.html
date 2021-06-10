@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet" />
+
+    <link href="./styles/style.css" rel="stylesheet" />
+    <link href="./styles/prism.css" rel="stylesheet" />
+
+    <title>Codegram</title>
+</head>
+
+<body onload="main(document.getElementById('graph'),
+        document.getElementById('outline'),
+        document.getElementById('toolbar'),
+        document.getElementById('panel-left'),
+        document.getElementById('footer'));">
+
+    <!-- Creates a container for the splash screen -->
+    <div id="splash" style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:1;">
+        <center id="splash" style="padding-top:230px;">
+            <img src="./images/loading.svg">
+        </center>
+    </div>
+
+    <!-- Tooltip -->
+    <div id="tooltip" role="tooltip">
+        <div id="tooltip-text">My tooltip</div>
+        <div id="arrow" data-popper-arrow></div>
+    </div>
+
+    <!-- Container -->
+    <div id="container">
+        <div id="toolbar">
+            <div class="item-left">
+                <svg class="dbm-icon" action="saveProject" tooltip="Save Project">
+                <use xlink:href="./images/icons.svg#dbi-save-toolbar"></use>
+            </svg>
+            </div>
+
+            <div class="item-center">
+                <svg class="dbm-icon" action="undo" tooltip="Undo - Ctrl+Z">
+                <use xlink:href="./images/icons.svg#dbi-undo-toolbar"></use>
+            </svg>
+                <svg class="dbm-icon" action="redo" tooltip="Redo - Ctrl+Y">
+                <use xlink:href="./images/icons.svg#dbi-redo-toolbar"></use>
+            </svg>
+                <div class="sep"></div>
+                <svg class="dbm-icon" action="zoomIn" tooltip="Zoom In">
+                <use xlink:href="./images/icons.svg#dbi-zoomin-toolbar"></use>
+            </svg>
+                <svg class="dbm-icon" action="zoomOut" tooltip="Zoom Out">
+                <use xlink:href="./images/icons.svg#dbi-zoomout-toolbar"></use>
+            </svg>
+                <svg class="dbm-icon" action="fit" tooltip="Zoom to Fit">
+                <use xlink:href="./images/icons.svg#dbi-zoomfit-toolbar"></use>
+            </svg>
+                <svg class="dbm-icon" action="actualSize" tooltip="Reset Zoom">
+                <use xlink:href="./images/icons.svg#dbi-zoomactual-toolbar"></use>
+            </svg>
+                <div class="sep"></div>
+                <svg class="dbm-icon" action="collapseAll" tooltip="Collapse all Tables">
+                <use xlink:href="./images/icons.svg#dbi-collapse-toolbar"></use>
+            </svg>
+                <svg class="dbm-icon" action="expandAll" tooltip="Expand all Tables">
+                <use xlink:href="./images/icons.svg#dbi-expand-toolbar"></use>
+            </svg>
+            </div>
+
+            <div class="item-right">
+                <svg class="dbm-icon" action="showSql" tooltip="Export to Sql">
+                <use xlink:href="./images/icons.svg#dbm-icon-forward-engeneer-left-menu"></use>
+            </svg>
+                <svg class="dbm-icon" action="showPrisma" tooltip="Export to Prisma">
+                <use xlink:href="./images/icons.svg#dbm-icon-reverse-eng-add-file"></use>
+            </svg>
+                <svg class="dbm-icon" action="export" tooltip="Save Diagram">
+                <use xlink:href="./images/icons.svg#dbm-icon-reverse-engineer-upload-toolbar"></use>
+            </svg>
+            </div>
+        </div>
+        <div id="panel-left">
+            <br/>
+            <svg class="dbm-icon" action="createTable" tooltip="Create Table">
+                <use xlink:href="./images/icons.svg#dbm-icon-table"></use>
+            </svg>
+            <svg class="dbm-icon" action="createRelationship" tooltip="Create Relationship">
+                <use xlink:href="./images/icons.svg#dbm-icon-idrel"></use>
+            </svg>
+        </div>
+        <div id="graph"></div>
+        <div id="panel-right"></div>
+        <div id="footer"></div>
+    </div>
+
+    <!-- Outline -->
+    <div id="outline"></div>
+
+    <!-- Modal -->
+    <input class="modal-state" id="modal-check" type="checkbox" />
+    <div class="modal">
+        <label class="modal__bg" for="modal-check"></label>
+        <div class="modal__inner">
+            <label class="modal__close" for="modal-check"></label>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Alert -->
+    <input class="alert-state" id="alert-check" type="checkbox" />
+    <div class="alert">
+        <h3 id="alert-content">Mensagem</h3>
+        <label class="alert__close" for="alert-check">&times;</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    
+    <script type="text/javascript" src="./scripts/app.js"></script>
+    <script type="text/javascript" src="./scripts/prismjs/prism.js"></script>
+    <script type="text/javascript">
+        mxBasePath = './scripts/mxgraph/javascript/src/';
+    </script>
+    <script type="text/javascript" src="./scripts/mxgraph/javascript/src/js/mxClient.js"></script>
+    <script type="text/javascript" src="./scripts/app.js"></script>
+
+    <link href="./styles/form.css" rel="stylesheet" />
+</body>
+
+</html>
