@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="144px" src="https://ibb.co/7rwkd6n" />
+  <img width="144px" src="https://i.ibb.co/1RDztwr/codegram.png" />
 </p>
 
 <h1 align="center">codegram</h1>
