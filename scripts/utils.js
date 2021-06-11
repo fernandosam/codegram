@@ -15,7 +15,7 @@ function loadDataTypes(filename) {
     for (var i = 0; i < lines.length; i++) {
         // Ignores comments and /n lines (starting with #)
         if (lines[i].substring(0, 1) != "#" && lines[i].length > 1) {
-            var line = lines[i].substring(0, lines[i].length - 1);
+            var line = lines[i].substring(0, lines[i].length);
             var columns = line.split(',');
 
             var dataType = new DataType(columns[0], columns[1]);
